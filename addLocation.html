@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Location</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container my-4 pb-4">
+        <h2 class="display-4 mb-3">Add new location</h2>
+        <form method="POST" action="./saveLocation.php" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="lat">Latitude</label>
+                <input type="number" step="any" name="lat" class="form-control" id="lat" placeholder="Enter your latitude" required>
+            </div>
+            <div class="form-group">
+                <label for="lng">Longitude</label>
+                <input type="number" step="any" name="lng" class="form-control" id="lng" placeholder="Enter your Longitude" required>
+            </div>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" class="form-control" id="title" placeholder="Enter your Marker title" required>
+            </div>
+            <div class="form-group">
+                <label for="des">Description for this location</label>
+                <textarea name="des" class="form-control" id="des" rows="3" required></textarea>
+              </div>
+            <div class="form-group">
+                <label for="img">Picture for this location</label>
+                <input type="file" name="img" class="form-control-file" id="img" required>
+            </div>
+            
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
